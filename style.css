@@ -262,6 +262,7 @@ header img {
 }
 .skill-list-grid{
     width: 100%;
+    display: none;
 }
 
 .skill-list{
