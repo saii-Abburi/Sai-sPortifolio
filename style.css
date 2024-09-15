@@ -228,6 +228,71 @@ header img {
 }
 
 
+.skills-section{
+    padding: 0 10vw;
+}
+
+
+
+.skill-content{
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    margin: 20px auto;
+    width: 100%;
+    user-select: none;
+}
+
+.skill-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px auto;
+    font-size: 1.2em;
+    width: 350px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.skill-header div{
+    margin: 0 auto;
+}
+
+.skill-header i{
+    margin: inherit auto;
+}
+.skill-list-grid{
+    width: 100%;
+}
+
+.skill-list{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: left;
+}
+
+.skill-list .skill-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    margin: 1vw auto;
+}
+
+.skill-bar{
+    background: #eee;
+    height: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin:  10px auto ;
+}
+.bar{
+    background: var(--highlight-color);
+    height: 100%;
+    border-radius: 10px;
+}
+
 
 #experience {
     display: flex;
