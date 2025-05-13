@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: Poppins;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -16,6 +17,10 @@
     --orange-color: #FF6600;
     --highlight-color: #5779e0;
     --text-color: rgb(85, 83, 83);
+}
+
+::selection{
+    background-color: rgba(87, 121, 224,.4);
 }
 
 .white {
@@ -101,22 +106,16 @@ header img {
     margin-top: 50px;
 }
 
-.home .home-info {
-
-    margin-right: 16vh;
-}
-
 .home .home-info h1 {
     font-size: 70px;
     text-align: center;
+    line-height: 65px;
+    font-weight: 550;
+    margin-bottom: 24px;
 }
 
 .home .home-info h1 span {
     color: var(--highlight-color);
-}
-
-.home .home-info h1 .highlight {
-    font-size: 1.5em;
 }
 
 .home .home-info .home-para p {
@@ -143,48 +142,40 @@ header img {
     color: #fff;
     cursor: pointer;
     border-radius: 8px;
-    transition: all .3s linear;
+    transition: all .5s ease-in;
 }
 
 .home .home-info .home-buttons button:hover,
 .about button:hover {
-    background: #fff;
+    background: rgba(255 , 255 , 255 , 0.8);
     color: var(--highlight-color);
-    scale: 1.01;
     box-shadow: 0 0 10px var(--highlight-color);
 }
 
 
-.home-img {
-    display: grid;
-    place-items: center;
-}
-
-.home-img img {
-    width: 300px;
-    border-radius: 50%;
-}
-
 #home-scroll {
     color: var(--text-color);
-    margin-top: 40px;
-    margin-left: 33vw;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
     font-size: 23px;
     cursor: pointer;
-    transition: all .3s linear;
+    transition: all .4s ease-in-out;
 }
 
 #home-scroll:hover {
-    transform: translateY(5px);
+    transform: translateY(7px);
 }
 
 
 .about {
     text-align: center;
     display: flex;
+    gap: 12px;
     margin: 10px 40px 0;
-    padding: 80px;
+    padding:24px 80px;
     font-size: 23px;
     color: var(--text-color);
     justify-content: center;
@@ -235,8 +226,7 @@ header img {
 
 
 .skill-content{
-    display: grid;
-    place-items: center;
+
     box-sizing: border-box;
     margin: 20px auto;
     width: 100%;
@@ -297,38 +287,87 @@ header img {
 
 #experience {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 24px;
 }
 
-#project1 {
+#experiences #project1 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 2vw 0;
-    width: 70%;
     cursor: pointer;
     justify-content: center;
     box-sizing: border-box;
+    border-radius: 8px;
+    gap: 18px;
+    width: 500px;
+    height: 600px;
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects{
+    flex-wrap: wrap;
+}
+
+#projects #project1 {
+    width: 450px;
+    min-height: 600px;
+    cursor: pointer;
+    box-sizing: border-box;
     border-radius: 20px;
-    background: var(--highlight-color);
-    color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
 }
 
-#project1:hover {
-    transform: translateY(-12px);
-}
+#projects #project1 img{
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    object-fit:fill;
 
-#project1 #text-right {
-    text-align: right;
+}
+#projects #project1 #experience-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content:start;
+}
+#projects #project1 #experience-buttons button ,.project-src button {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-weight: 550;
     font-size: 12px;
+    background: #fff;
+    padding: 2px 5px;
 }
+.project-src{
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 5px 4px 5px;
+}
+.project-src button{
+    font-size: 13px;
+    font-weight: 450;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.project-src button:hover{
+    background-color: #ececec;
+}
+
 
 #experience-image img {
-    width: 316px;
-    padding: 20px;
-    border-radius: 30px;
+    width: 100%;
+    height: 320px;
+
 }
 
 .experience-container {
@@ -338,30 +377,38 @@ header img {
 }
 
 .experience-container h2 {
-    font-weight: bold;
-    font-size: 23px;
+    font-weight: 600;
+    color: #000;
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.experience-container p{
+    color: var(--text-color);
+    text-align: left;
+    margin-bottom: 12px;
 }
 
-#experience-buttons {
+#experiences #experience-buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 20px 0;
 }
 
-#experience-buttons button {
+#experiences #experience-buttons button {
     padding: 4px 8px;
     border-radius: 8px;
-    background: #435daa;
-    color: var(--primary-color);
     border: none;
     outline: none;
     cursor: pointer;
 }
-
-.project-container h2 {
-    padding-bottom: 12px;
+#experiences #experience-buttons button:hover{
+    background-color: #ececec;
 }
+
+
 
 .project-container p {
     font-size: 15px;
@@ -467,7 +514,14 @@ footer{
     padding: 8px;
     border: 1px solid var(--highlight-color);
     border-radius: 8px;
+    width: 224px;
     margin-top: 8px;
+}
+.row3{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #footer-rows p {
@@ -508,10 +562,6 @@ footer{
     width: 88px;
 }
 
-
-#experience-buttons button:hover {
-    box-shadow: 0 0 12px var(--hover-color);
-}
 .row4 ul{
     display: flex;
     gap: 12px;
@@ -523,11 +573,31 @@ footer{
     list-style: none;
     font-size: 32px;
 }
-.row4 ul li a i:hover{
-    color: var(--highlight-color);
+
+.fa-free-code-camp{
+    color: rgba(0, 0, 0, 0.8);
 }
-
-
+.fa-free-code-camp:hover{
+    color: rgba(0, 0, 0, 1);
+}
+.fa-github{
+    color: rgba(24, 23, 23, 0.7);
+}
+.fa-github:hover{
+    color: rgba(24, 23, 23, 1);
+}
+.fa-linkedin{
+    color: rgba(0, 119, 181, 0.8);
+}
+.fa-linkedin:hover{
+    color: rgba(0, 119, 181, 1);
+}
+.fa-instagram{
+    color: rgba(225, 48, 108, 0.8);
+}
+.fa-instagram:hover{
+    color: rgba(225, 48, 108, 1);
+}
 
 
 
@@ -592,6 +662,9 @@ footer{
     .home .home-info {
         margin: 0;
     }
+    .skills-section{
+        padding: 0px;
+    }
 
     #project1 {
         flex-direction: column;
@@ -625,6 +698,7 @@ footer{
         overflow: hidden;
         animation: anime2 4s linear infinite;
     }
+
 
     @keyframes anime2 {
         0%{
