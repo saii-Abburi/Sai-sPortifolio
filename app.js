@@ -7,7 +7,7 @@ let bgcToggle = document.getElementById("background-toggle");
 let aTagToggle = document.getElementsByTagName("a");
 bgcToggle.onclick = function(){
     if(bgcToggle.src.includes("/images/moon.png")) {
-        bgcToggle.src = "/images/sun.png";
+        bgcToggle.src = "./images/sun.png";
         document.body.classList.add("black");
         document.body.classList.remove("white");
         for (let i = 0; i < aTagToggle.length; i++) {
@@ -15,7 +15,7 @@ bgcToggle.onclick = function(){
         }
     }
     else {
-        bgcToggle.src = "/images/moon.png";
+        bgcToggle.src = "./images/moon.png";
         document.body.classList.add("white");
         document.body.classList.remove("black");
         for (let i = 0; i < aTagToggle.length; i++) {
