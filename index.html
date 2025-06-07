@@ -19,23 +19,19 @@
 
         <div class="nav-menu">
             <ul>
-                <li><a id="a-black" href="">HOME</a></li>
-                <li><a id="a-black" href="">ABOUT</a></li>
-                <li><a id="a-black" href="">SKILLS</a></li>
-                <li><a id="a-black" href="">PROJECTS</a></li>
-                <li><a id="a-black" href="">CONTACT</a></li>
-                <li><a id="a-black" href="">ACHIEVEMENTS</a></li>
+                <li><a id="a-black" href="#home">HOME</a></li>
+                <li><a id="a-black" href="#about">ABOUT</a></li>
+                <li><a id="a-black" href="#skills">SKILLS</a></li>
+                <li><a id="a-black" href="#projects">PROJECTS</a></li>
+                <li><a id="a-black" href="#contactmain">CONTACT</a></li>
+                <li><a id="a-black" href="#skills">ACHIEVEMENTS</a></li>
             </ul>
         </div>
-        <div class="toggle">
-            <label for="menu-toggle-btn" id="menu-toggle" class="menu-btn"><i class="ri-menu-line"></i></label>
-            <input type="checkbox" id="menu-toggle-btn">
-            <img src="./images/moon.png" id="background-toggle">
-        </div>
+        <img src="./images/moon.png" id="background-toggle">
 
     </header>
     <hr>
-    <div class="home">
+    <div class="home" id="home">
         <div class="home-info">
             <h1>Hi!👋,I'm <br>
                 <span id="blue-color" class="highlight">SAI</span><br>
@@ -50,7 +46,7 @@
             <div class="home-buttons">
                 <a href="#contactmain"><button id="contact">Contact Me <i
                             class="fa-solid fa-arrow-right"></i></button></a>
-                <button id="contact">My CV <i class="fa-solid fa-download"></i></button>
+                <a href="./images/SaiResume.pdf" download><button id="contact">My CV <i class="fa-solid fa-download"></i></button></a>
             </div>
         </div>
     </div>
@@ -63,7 +59,7 @@
         <p>My <span id="blue-color">Introduction</span></p>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="about-img">
             <img src="./images/me.jpg">
         </div>
@@ -94,7 +90,7 @@
                     <span>Available</span>
                 </div>
             </div>
-            <button id="cvDownload">Download Cv <i class="fa-solid fa-download"></i></button>
+            <a href="./images/SaiResume.pdf" download><button  id="cvDownload">Download Cv <i class="fa-solid fa-download"></i></button></a>
         </div>
     </div>
 
@@ -137,7 +133,7 @@
 
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div id="skills-intro" class="outro">
             <h2 id="blue-color">Skills & Highlights</h2>
             <p>MY <span id="blue-color">Technical </span>Skills</p>
@@ -211,6 +207,85 @@
 
             <div id="project1">
                 <div id="experience-image" class="project-image">
+                    <img src="./images/E-Guide.png">
+                </div>
+                <div class="experience-container project-container">
+                    <h2>E-Guide</h2>
+                    <p>E-Guide is a Full Stack web application where CRs upload notes, materials, and questions, making academic resources accessible to all classmates instantly.</p>
+                    <div id="experience-buttons">
+                        <button>HTML5 , CSS</button>
+                        <button>Javascript</button>
+                        <button>React.js</button>
+                        <button>Firebase</button>
+                        <button>Node.js</button>
+                        <button>Express.js</button>
+                        <button>MongoDB</button>
+                        <button>Material UI</button>
+                        <button>React Router</button>
+                    </div>
+                    <div class="project-src">
+                        <a href="https://e-guide-4e170.web.app/"
+                        target="_blank"><button><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
+                            Demo</button></a>
+                            <a href="https://github.com/saii-Abburi/E-Guide" target="_blank"><button><i class="fa-brands fa-github"></i> Source Code</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+            
+                
+            <div id="project1">
+                <div id="experience-image">
+                    <img src="./images/netflixGpt.png">
+                </div>
+                <div class="experience-container project-container">
+                    <h2>Netflix Gpt</h2>
+                    <p>A Netflix clone with a clean, responsive interface that lets users browse, search, and watch
+                        movies and shows. It features dynamic content, custom categories, and a user-friendly design for
+                        a smooth streaming experience.
+                    </p>
+                    <div id="experience-buttons">
+                        <button>HTML5 , CSS</button>
+                        <button>Javascript</button>
+                        <button>React.js</button>
+                        <button>TMDB API</button>
+                    </div>
+                    <div class="project-src">
+                        <a href="https://fir-authentication-ca637.web.app/"
+                            target="_blank"><button><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
+                                Demo</button></a>
+                        <a href="https://github.com/saii-Abburi/netflix-gpt" target="_blank"><button><i class="fa-brands fa-github"></i> Source Code</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="project1">
+                <div id="experience-image">
+                    <img src="./images/botBuddy.png" class="project-image">
+                </div>
+                <div class="experience-container project-container">
+                    <h2>BotBuddy</h2>
+                    <p>BotBuddy is a smart AI chatbot designed to assist users with instant answers, guidance, and friendly conversation anytime they need</p>
+                    <div id="experience-buttons">
+                        <button>HTML5 , CSS</button>
+                        <button>Javascript</button>
+                        <button>Responsive Design</button>
+                        <button>Firebase</button>
+                    </div>
+                    <div class="project-src">
+                        <a href="https://saii-abburi.github.io/chatbot/"
+                            target="_blank"> <button><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
+                                Demo</button></a>
+                        <a href="https://github.com/saii-Abburi/chatbot" target="_blank"><button><i class="fa-brands fa-github"></i> Source Code</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="project1">
+                <div id="experience-image" class="project-image">
                     <img src="./images/project1.png">
                 </div>
                 <div class="experience-container project-container">
@@ -227,104 +302,52 @@
                         <a href="https://saii-abburi.github.io/30-days---30-projects/Weather%20-%201/index.html"
                             target="_blank"> <button><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
                                 Demo</button></a>
-                        <button><i class="fa-brands fa-github"></i> Source Code</button>
+                                <a href="https://github.com/saii-Abburi/30-days---30-projects/tree/main/Weather%20-%201" target="_blank"><button><i class="fa-brands fa-github"></i> Source Code</button></a>
+                       
                     </div>
                 </div>
             </div>
-            <div id="project1">
-                <div id="experience-image" class="project-image">
-                    <img src="./images/musicplayer.png">
-                </div>
-                <div class="experience-container project-container">
-                    <h2>Music Player</h2>
-                    <p>A sleek and intuitive music player app featuring circular album art, simple controls, and a soft
-                        color palette. Users can play, pause, skip, and rewind tracks, with song details clearly
-                        displayed for an enhanced listening experience.</p>
-                    <div id="experience-buttons">
-                        <button>HTML5 , CSS</button>
-                        <button>Javascript</button>
-                        <button>Responsive Design</button>
-                    </div>
-                    <div class="project-src">
-                        <a href="https://saii-abburi.github.io/30-days---30-projects/Music%20Player%20-%2010/index.html"
-                            target="_blank"><button><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
-                                Demo</button></a>
-                        <button><i class="fa-brands fa-github"></i> Source Code</button>
-                    </div>
-                </div>
-            </div>
-
-
 
             <div id="project1">
                 <div id="experience-image">
-                    <img src="./images/generatePassword.png">
+                    <img src="./images/Nestora.png" class="project-image">
                 </div>
                 <div class="experience-container project-container">
-                    <h2>Random Password Generator</h2>
-                    </h2>
-                    <p> A simple and efficient random password generator that creates strong, secure passwords with one
-                        click. Its minimal interface allows quick copying, ensuring fast and safe password creation.
+                    <h2>Nestora</h2>
+                    <p> Nestora is an elegant furniture e-commerce platform offering personalized interiors, helping users create their perfect living space effortlessly.
                     </p>
                     <div id="experience-buttons">
                         <button>HTML5 , CSS</button>
                         <button>Javascript</button>
-                        <button>Responsive Design</button>
-                    </div>
-                    <div class="project-src">
-                        <a href="https://saii-abburi.github.io/30-days---30-projects/password%20generator%20-%204/index.html"
-                            target="_blank"><button><i class="fa-solid fa-arrow-up-right-from-square"></i>Live
-                                Demo</button></a>
-                        <button><i class="fa-brands fa-github"></i> Source Code</button>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div id="project1">
-                <div id="experience-image">
-                    <img src="./images/netflixClone.png" class="project-image">
-                </div>
-                <div class="experience-container project-container">
-                    <h2>Netflix Clone</h2>
-                    <p>A Netflix clone with a clean, responsive interface that lets users browse, search, and watch
-                        movies and shows. It features dynamic content, custom categories, and a user-friendly design for
-                        a smooth streaming experience.
-                    </p>
-                    <div id="experience-buttons">
-                        <button>HTML5 , CSS</button>
-                        <button>Javascript</button>
-                        <button>Responsive Design</button>
-                        <button>React.js</button>
+                        <button>React</button>
                         <button>Firebase</button>
                     </div>
                     <div class="project-src">
-                        <button><i class="fa-brands fa-github"></i> Source Code</button>
+                        <a href="https://nestora.vercel.app/" target="_blank"><button><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</button></a>
+                                    <a href="https://github.com/saii-Abburi/Nestora" target="_blank"><button><i class="fa-brands fa-github"></i> Source Code</button></a>
                     </div>
                 </div>
             </div>
 
-
             <div id="project1">
                 <div id="experience-image">
-                    <img src="./images/pf.png" class="project-image">
+                    <img src="./images/TwoGoodCo.png" class="project-image">
                 </div>
                 <div class="experience-container project-container">
-                    <h2>Secondary Portfolio</h2>
-                    <p> A personal portfolio website showcasing skills, projects, and achievements with a modern design.
-                        Features a dynamic Typed.js intro and organized sections for a professional digital presence.
+                    <h2>Two Good Co</h2>
+                    <p>This Two Good Co clone replicates a clean, minimalist shopping experience, offering ethically crafted products with a focus on purpose.</p>
+                    <p>
                     </p>
                     <div id="experience-buttons">
                         <button>HTML5 , CSS</button>
                         <button>Javascript</button>
-                        <button>Responsive Design</button>
-                        <button>Typed.js</button>
+                        <button>Gsap</button>  
                     </div>
                     <div class="project-src">
-                        <a href="https://saii-abburi.github.io/portifolio-website/" target="_blank"><button><i
+                        <a href="https://saii-abburi.github.io/Two-Good-Co/" target="_blank"><button><i
                                     class="fa-solid fa-arrow-up-right-from-square"></i>Live Demo</button></a>
-                        <button><i class="fa-brands fa-github"></i> Source Code</button>
+                                    <a href="https://github.com/saii-Abburi/Two-Good-Co/" target="_blank"><button><i class="fa-brands fa-github"></i> Source Code</button></a>
                     </div>
                 </div>
             </div>
@@ -332,7 +355,7 @@
         </div>
     </section>
 
-    <section id="acheivements">
+    <section id="acheivements-section">
         <div id="acheivements-intro" class="outro">
             <h2 id="blue-color">Achievements</h2>
             <p>MY <span id="blue-color">Remarkable </span>milestones</p>
@@ -340,21 +363,41 @@
 
         <div id="acheivements">
 
+
             <div class="completecard">
                 <div class="achievement-content">
                     <div class="acheivement-card">
                         <div class="front">
-                            <img src="./images/streak.png">
+                            <img src="./images/leetcode.png">
                         </div>
                         <div class="back">
                             <div class="content">
-                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the institute First
-                                    Rank <br>*example</p>
+                                <p>Maintaing the Streak in the leetcode over the past 4 months
                             </div>
                         </div>
                     </div>
                 </div>
-                <p>Holding Institute Rank - 1 on all Coding platforms</p>
+                <p>Holding the impressive stats in Leetcode</p>
+            </div>
+
+
+
+
+
+            <div class="completecard">
+                <div class="achievement-content">
+                    <div class="acheivement-card">
+                        <div class="front">
+                            <img src="./images/Github.png">
+                        </div>
+                        <div class="back">
+                            <div class="content">
+                                <p>Over 250+ contributions in this year so far..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Contributing to the various projects</p>
             </div>
 
 
@@ -366,84 +409,12 @@
                         </div>
                         <div class="back">
                             <div class="content">
-                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the institute First
-                                    Rank <br>*example</p>
+                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the Streak</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p>Holding Institute Rank - 1 on all Coding platforms</p>
-            </div>
-
-            <div class="completecard">
-                <div class="achievement-content">
-                    <div class="acheivement-card">
-                        <div class="front">
-                            <img src="./images/streak.png">
-                        </div>
-                        <div class="back">
-                            <div class="content">
-                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the institute First
-                                    Rank <br>*example</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>Holding Institute Rank - 1 on all Coding platforms</p>
-            </div>
-
-
-            <div class="completecard">
-                <div class="achievement-content">
-                    <div class="acheivement-card">
-                        <div class="front">
-                            <img src="./images/streak.png">
-                        </div>
-                        <div class="back">
-                            <div class="content">
-                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the institute First
-                                    Rank <br>*example</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>Holding Institute Rank - 1 on all Coding platforms</p>
-            </div>
-
-
-            <div class="completecard">
-                <div class="achievement-content">
-                    <div class="acheivement-card">
-                        <div class="front">
-                            <img src="./images/streak.png">
-                        </div>
-                        <div class="back">
-                            <div class="content">
-                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the institute First
-                                    Rank <br>*example</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>Holding Institute Rank - 1 on all Coding platforms</p>
-            </div>
-
-
-            <div class="completecard">
-                <div class="achievement-content">
-                    <div class="acheivement-card">
-                        <div class="front">
-                            <img src="./images/streak.png">
-                        </div>
-                        <div class="back">
-                            <div class="content">
-                                <p>In all coding platforms like GFG,Leetcode,Coding Ninjas holding the institute First
-                                    Rank <br>*example</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>Holding Institute Rank - 1 on all Coding platforms</p>
+                <p>Maintaining streak in(CodeChef , FreeCodeCamp)</p>
             </div>
 
         </div>
@@ -534,9 +505,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="footer-bg-one"></div>
-                <div class="footer-bg-two"></div>
-
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif" alt="" class="footer-bg-one">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif" alt="" class="footer-bg-two">
             </div>
         </div>
     </footer>

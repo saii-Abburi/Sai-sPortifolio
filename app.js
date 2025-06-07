@@ -1,47 +1,3 @@
-
-
-
-
-
-let bgcToggle = document.getElementById("background-toggle");
-let aTagToggle = document.getElementsByTagName("a");
-bgcToggle.onclick = function(){
-    if(bgcToggle.src.includes("/images/moon.png")) {
-        bgcToggle.src = "./images/sun.png";
-        document.body.classList.add("black");
-        document.body.classList.remove("white");
-        for (let i = 0; i < aTagToggle.length; i++) {
-            aTagToggle[i].classList.add("black");
-        }
-    }
-    else {
-        bgcToggle.src = "./images/moon.png";
-        document.body.classList.add("white");
-        document.body.classList.remove("black");
-        for (let i = 0; i < aTagToggle.length; i++) {
-            aTagToggle[i].classList.remove("black");
-        }
-    }
-}
-
-
-
-let skillOpenCloseToggle = document.getElementsByClassName("skill-header");
-let skillGrid = document.getElementsByClassName("skill-list-grid");
-let arrow = document.getElementsByClassName("fa-angle-down");
-
-for (let i = 0; i < skillOpenCloseToggle.length; i++) {
-    skillOpenCloseToggle[i].addEventListener("click", () => {
-        if (skillGrid[i].style.display === 'none') {
-            skillGrid[i].style.display = 'block';
-        } else {
-
-            skillGrid[i].style.display = 'none';
-        }
-    });
-}
-
-
 const experienceData = {
     experience: [
       {
@@ -82,3 +38,35 @@ const experienceData = {
 
     experienceContainer.appendChild(project);
   });
+
+// Theme toggle logic
+const backgroundToggle = document.getElementById('background-toggle');
+const body = document.body;
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+    backgroundToggle.src = './images/sun.png';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-mode');
+    backgroundToggle.src = './images/moon.png';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// On load, set theme from localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  setTheme('dark');
+} else {
+  setTheme('light');
+}
+
+backgroundToggle.addEventListener('click', () => {
+  if (body.classList.contains('dark-mode')) {
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+});
